@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homeboard - PIUS</title>
+    <style>
+        .rechteck {
+            width:
+                300px;
+            height:
+                100px;
+            background-color:
+                rgb(58, 95, 109);
+            border-radius: 50px;
+        }
+
+        .center-margin-top {
+            display: flex;
+            justify-content: center;
+            margin-top: 300px;
+        }
+    </style>
+</head>
+
+<body style="background-image: url(bg3.png);" onload="startTime()">
+    <div class="center-margin-top">
+        <div class="rechteck"></div>
+        <script>
+            function startTime() {
+                const today = new Date();
+                let h = today.getHours();
+                let m = today.getMinutes();
+                let s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+                setTimeout(startTime, 1000);
+            }
+
+            function checkTime(i) {
+                if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+                return i;
+            }
+        </script>
+
+    </div>
+    <div class="margin">
+        <a href="https://netflix.tail970eac.ts.net/"><img height="250px" src="neicon.webp"></a>
+        <a href="http://100.125.185.28:2283/" style="margin-left: 50px;"><img height="250px" src="bilfiklo.webp"></a>
+        <a href="http://100.125.185.28:8096/" style="margin-left: 50px;"><img height="250px" src="jelicon.webp"></a>
+        <a href="http://100.125.185.28:8096/web/#/music"><img height="250px" src="musicon.webp"></a>
+        <a href="https://netflix.tail970eac.ts.net/apps/doom_nextcloud/"><img height="250px"
+                src="Doom-4-1-icon.png"></a>
+
+        <a href="http://100.125.185.28:8096/web/#/movies"><img height="250px" src="vidicon.webp"></a>
+
+
+
+    </div>
+</body>
+
+</html>
