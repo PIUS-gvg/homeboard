@@ -33,7 +33,7 @@
 
     </div>
     <div id="txt"></div>
-    <div id="datum">    </div>
+    <div id="datum"> </div>
 
     <script>
         function startTime() {
@@ -44,10 +44,11 @@
             let day = today.getDate();
             let month = today.getMonth() + 1;
             let year = today.getFullYear();
+            let weekday = today.getDay();
             m = checkTime(m);
             s = checkTime(s);
             document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
-            document.getElementById('datum').innerHTML =    day + "." + month + "." + year;
+            document.getElementById('datum').innerHTML = weekday + "    " + day + "." + month + "." + year;
             setTimeout(startTime, 1000);
         }
 
