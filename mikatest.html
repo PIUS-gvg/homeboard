@@ -33,6 +33,7 @@
 
     </div>
     <div id="txt"></div>
+    <div id="datum">    </div>
 
     <script>
         function startTime() {
@@ -40,9 +41,13 @@
             let h = today.getHours();
             let m = today.getMinutes();
             let s = today.getSeconds();
+            let day = today.getDate();
+            let month = today.getMonth() + 1;
+            let year = today.getFullYear();
             m = checkTime(m);
             s = checkTime(s);
             document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+            document.getElementById('datum').innerHTML =    day + "." + month + "." + year;
             setTimeout(startTime, 1000);
         }
 
